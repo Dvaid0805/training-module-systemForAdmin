@@ -1,0 +1,120 @@
+table {
+    border-collapse: collapse;
+}
+tbody, thead .table-row + .table-row{
+    border-top: 1px solid rgba(67,94,190, 0.10);
+}
+.page-content {
+    padding: 24px 0 8px 0;
+    border: 2px solid #435ebe;
+    border-radius: 12px;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+.personal-progres-table {
+    width: 100%;
+}
+
+.table-header-item {
+    text-align: left;
+    padding: 12px 24px;
+    color: #7b809a;
+    opacity: .7;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.header-completion {
+    text-align: center;
+}
+.table-body-item {
+    text-align: left;
+    padding: 16px 24px;
+    font-weight: 800;
+    font-size: 12px;
+    color: #7B809A;
+}
+.body-btn {
+    text-align: center;
+}
+.body-title  {
+    font-size: 14px;
+    color: #344767;
+}
+.body-budget {
+    font-size: 14px;
+}
+.body-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar {
+    height: 3px;
+    width: 120px;
+    margin: 0 0 0 5px;
+    background-color: #f0f2f5;
+    border-radius: 2px;
+}
+.progress-bar-done{
+    height: 3px;
+    border-radius: 0.125rem;
+}
+.perfectly {
+    width: 100%;
+    background-image: linear-gradient(195deg,#66bb6a,#43a047);
+}
+.satisfactory  {
+    width: 60%;
+    background-image: linear-gradient(195deg,#49a3f1,#1a73e8);flex-direction: column;
+}
+.unacceptable {
+    width: 30%;
+    background-image: linear-gradient(195deg,#ef5350,#e53935);
+}
+
+.body-start-btn {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+.body-start-btn:after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #0cf;
+     border-radius: 10rem;
+     z-index: -2;
+ }
+.body-start-btn:before {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0%;
+     height: 100%;
+    background-color: #4682B4;
+     transition: all .3s;
+     border-radius: 10rem;
+     z-index: -1;
+ }
+.body-start-btn:hover {
+    color: #fff;
+}
+.body-start-btn:hover::before {
+    width: 100%;
+}
+
+

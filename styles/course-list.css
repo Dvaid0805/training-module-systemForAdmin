@@ -1,0 +1,125 @@
+.course-list {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.course-item {
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-item + .course-item{
+    border-top: 0;
+}
+.course-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.course-item:last-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.survey-name {
+    max-width: 66%;
+}
+.result-btn {
+    padding: 8px 6px;
+    border-radius: 4px;
+    background-color: #7C8DB5;
+    color: #fff;
+    transition: background-color .3s;
+}
+.result-btn:hover {
+    background-color: #435EBE;
+}
+.status-indicator{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: #c1c1c1;
+    border-radius: 8px;
+}
+.status-indicator::before {
+    content: "Inactive";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #212529;
+}
+.status-indicator.active {
+    background-color: #2EC194;
+}
+.status-indicator.active::before {
+    content: "Active";
+    background-color: transparent;
+}
+.extra-settings {
+    position: relative;
+}
+.extra-settings-btn i {
+    font-size: 22px;
+    color: #212529;
+}
+.extra-settings-btn i:hover {
+    font-size: 22px;
+    color: #364b98;
+}
+
+.extra-settings-list-box {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 35px;
+    right: -10px;
+    transition: visibility 0s .4s,opacity .4s 0s, margin-top .4s 0s;
+
+}
+.extra-settings-list {
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+.extra-settings-list-box::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    bottom: 99%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent gray transparent;
+}
+.extra-settings-list-box.active {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    transition: opacity .4s .1s, margin-top .4s .1s;
+    z-index: 1;
+}
+.extra-settings-item {
+    transition: all .2s;
+}
+.extra-settings-item:hover {
+    color: #fff;
+}
+.status-btn {
+    cursor: pointer;
+}
+
